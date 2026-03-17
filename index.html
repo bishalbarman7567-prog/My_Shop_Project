@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Easy</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    /* NAVBAR */
+    .nav-container {
+      background: #111;
+      color: white;
+      padding: 10px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #8486ac;
+    }
+
+    /* ===== CATEGORY BAR ===== */
+    .category-nav {
+      background: #e5e5e5;
+      padding: 10px 8%;
+      display: flex;
+      gap: 25px;
+    }
+
+    .category-nav a {
+      text-decoration: none;
+      color: #151414;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .category-nav a:hover {
+      color: #ff6a00;
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-bar {
+      padding: 15px 8%;
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      width: 350px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .search-bar button {
+      padding: 8px 15px;
+      border: none;
+      background: #febd69;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* ===== CAROUSEL ===== */
+    .carousel img {
+      height: 300px;
+      object-fit: cover;
+    }
+
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+      margin: 30px 8%;
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding: 20px 8%;
+      background: #f5f5f5;
+    }
+
+    /* ===== PRODUCT CARD ===== */
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .product-card p {
+      font-weight: bold;
+      color: #b12704;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background: #ff9900;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .product-card button:hover {
+      background: #f08804;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+<header class="nav-container">
+
+  <div class="logo">
+    <img src="img.png">
+    <h3>MyShop</h3>
+  </div>
+
+  <div class="nav-links">
+
+    <!-- OFFCANVAS BUTTON -->
+    <button class="btn btn- text-white btn-sm" data-bs-toggle="offcanvas" data-bs-target="#menu">
+      Home
+    </button>
+
+    <a href="Contact.html">Contact</a>
+    <a href="my login.html">Login</a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+      <button class="btn  text-white btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+        About
+      </button>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Cart</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</header>
+
+<!-- OFFCANVAS MENU -->
+<div class="offcanvas offcanvas-start" id="menu">
+  <div class="offcanvas-header">
+    <h5>Menu</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <h6>Trending</h6>
+    <ul class="list-group mb-3">
+      <li class="list-group-item">Best Seller</li>
+      <li class="list-group-item">Fashion</li>
+    </ul>
+
+    <h6>Categories</h6>
+    <ul class="list-group">
+      <li class="list-group-item">Mobiles</li>
+      <li class="list-group-item">Electronics</li>
+    </ul>
+  </div>
+</div>
+   
+
+   
+
+
+  
+
+  
+
+  <!-- ===== CATEGORY ===== -->
+  <div class="category-nav col-lg col-md ">
+    <a href="All.html">All</a>
+    <a href="Best Seller.html">Best Sellers</a>
+    <a href="Mobile.html">Mobiles</a>
+    <a href="Fashion.html">Fashion</a>
+    <a href="Electronies.html">Electronics</a>
+    <a href="Beauty.html">Beauty</a>
+
+  </div>
+
+  <!-- ===== SEARCH ===== -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search products..."><button type="submit">Search</button><br>
+    <li>
+      <a href="#">
+        Cart (<span id="cart-count">0</span>)
+      </a>
+    </li>
+  </div>
+
+  <!-- ===== CAROUSEL ===== -->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="Bishal photo new 12.jpg" class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="car.jpg" class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="mobile img.png" class="d-block w-100">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section col-lg-4 col-md-6>
+
+    <h2 class="section-title">Best moblie 50% off </h2>
+
+    <div class="grid">
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹5,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹9,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹45,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹10,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹8,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹5,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹12,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mobile img.png">
+        <h3>Smartphone</h3>
+        <p>₹15,999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <center>© 2026 Amazon Clone | For Learning Purpose</center>
+  </footer>
+  <!-- Bootstrap js -->
+  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js.js"></script>
+
+
+</body>
+
+</html>
